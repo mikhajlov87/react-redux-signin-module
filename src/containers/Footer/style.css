@@ -1,0 +1,11 @@
+.app__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.align-right {
+    margin-left: auto;
+}
+.previous {
+    color: #ccc;
+}

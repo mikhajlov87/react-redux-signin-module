@@ -1,0 +1,19 @@
+.radio__container {
+    border: 1px solid #ccc;
+    border-right: none;
+    height: 40px;
+    position: relative;
+}
+.radio__container.active {
+    background-color: #007bff;
+    color: #fff;
+}
+.radio__container--align-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.radio__container:last-child {
+    border-right: 1px solid #ccc;
+}

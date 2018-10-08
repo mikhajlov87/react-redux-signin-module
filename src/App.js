@@ -1,28 +1,46 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { connect } from 'react-redux';
+import { formValueSelector } from 'redux-form';
+import WizardForm from './containers/WizardForm';
+import showFormResults from './helpers/showFormResults';
+import './style.css';
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="app">
+        <WizardForm onSubmit={this.formSubmitHandler} />
       </div>
     );
   }
+
+  formSubmitHandler = () => {
+    const { day, month, year, email, password, sex, about } = this.props;
+    const result = {
+      user_data: {
+        email,
+        password,
+        gender: sex,
+        date_of_birth: new Date(`${year} ${month} ${day}`).getTime(),
+        how_hear_about_us: about || null,
+      },
+    };
+    showFormResults(result);
+  }
 }
+
+const selector = formValueSelector('wizard');
+
+App = connect(
+  (state) => ({
+    day: selector(state, 'day'),
+    month: selector(state, 'month'),
+    year: selector(state, 'year'),
+    email: selector(state, 'email'),
+    password: selector(state, 'pass'),
+    sex: selector(state, 'sex'),
+    about: selector(state, 'about'),
+  })
+)(App);
 
 export default App;

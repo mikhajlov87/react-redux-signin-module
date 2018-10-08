@@ -1,0 +1,26 @@
+::-webkit-input-placeholder {
+    text-align: center;
+}
+:-moz-placeholder { /* Firefox 18- */
+    text-align: center;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+    text-align: center;
+}
+:-ms-input-placeholder {
+    text-align: center;
+}
+.input {
+    border: none;
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.input:focus {
+    outline: none;
+}

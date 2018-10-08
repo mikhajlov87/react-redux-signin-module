@@ -1,0 +1,19 @@
+.progress-bar {
+    border: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
+    display: block;
+    height: 7px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.progress-bar__scale {
+    background-color: #007bff;
+    display: inline-block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    transition: width 1s;
+    width: 0;
+}

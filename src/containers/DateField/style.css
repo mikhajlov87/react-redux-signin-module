@@ -1,0 +1,16 @@
+.date-field__container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.input__container {
+    border: 1px solid #ccc;
+    border-right: none;
+    height: 40px;
+    position: relative;
+    width: calc(100% / 3);
+}
+.input__container:last-child {
+    border-right: 1px solid #ccc;
+}
