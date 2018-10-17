@@ -11,3 +11,6 @@ $ npm install
 ```bash
 $ npm run start
 ```
+
+### Working example
+[react-redux-signup-module](https://react-redux-signup-module.herokuapp.com/)
