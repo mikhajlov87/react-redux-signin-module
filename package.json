@@ -31,5 +31,9 @@
     "moment": "^2.22.2",
     "redux-form": "^7.4.2",
     "redux-form-validators": "^2.7.2"
+  },
+  "engines": {
+    "node": "8.11.3",
+    "npm": "6.4.1"
   }
 }
